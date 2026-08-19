@@ -1,0 +1,63 @@
+name: Lissia
+description: Thème premium pour boutique de brosses chauffantes - Design épuré halal
+theme_store_id:
+presets:
+  Default:
+    color_scheme: light
+    font_body_family: inter
+    font_body_scale: 100%
+    font_heading_family: inter
+    font_heading_scale: 100%
+    page_width: 1200
+    spacing_sections: medium
+  Dark:
+    color_scheme: dark
+    font_body_family: inter
+    font_body_scale: 100%
+    font_heading_family: inter
+    font_heading_scale: 100%
+
+settings:
+  - id: color_scheme
+    type: select
+    label: Schéma de couleurs
+    default: light
+    options:
+      - label: Clair
+        value: light
+      - label: Sombre
+        value: dark
+  - id: accent_color
+    type: color
+    label: Couleur accent (Or)
+    default: "#d4af37"
+  - id: primary_dark
+    type: color
+    label: Couleur primaire (Noir)
+    default: "#1a1a1a"
+  - id: font_body_family
+    type: font_picker
+    label: Police du corps
+    default: "'inter', sans-serif"
+  - id: font_heading_family
+    type: font_picker
+    label: Police des titres
+    default: "'inter', sans-serif"
+  - id: page_width
+    type: range
+    label: Largeur de page (px)
+    min: 1000
+    max: 1400
+    step: 50
+    default: 1200
+  - id: spacing_sections
+    type: select
+    label: Espacement sections
+    default: medium
+    options:
+      - label: Petit
+        value: small
+      - label: Moyen
+        value: medium
+      - label: Grand
+        value: large

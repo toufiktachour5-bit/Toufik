@@ -1,0 +1,99 @@
+{% style %}
+  .hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #2c2c2c 100%);
+    color: white;
+    padding: {% if section.settings.height == 'small' %}40px{% elsif section.settings.height == 'medium' %}80px{% else %}120px{% endif %} 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    color: var(--accent-gold);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .hero p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    background-color: var(--navy-blue);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
+{% endstyle %}
+
+<section class="hero">
+  <div class="container">
+    <h1>{{ section.settings.title }}</h1>
+    <p>{{ section.settings.subtitle }}</p>
+    <a href="{{ section.settings.button_link }}" class="btn btn-primary">{{ section.settings.button_text }} →</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Héros",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Excellence et Qualité"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous-titre",
+      "default": "Brosse chauffante professionnelle pour cheveux - Produit halal"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texte du bouton",
+      "default": "Découvrir nos produits"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Lien du bouton"
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "label": "Hauteur",
+      "default": "medium",
+      "options": [
+        {"label": "Petite", "value": "small"},
+        {"label": "Moyenne", "value": "medium"},
+        {"label": "Grande", "value": "large"}
+      ]
+    }
+  ]
+}
+{% endschema %}
