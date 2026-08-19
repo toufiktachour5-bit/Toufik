@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "title": "Lissez. Brillez. Transformez.",
+        "subtitle": "La brosse chauffante qui redéfinit votre routine beauté",
+        "button_text": "Découvrir nos produits",
+        "button_link": "/collections/all"
+      }
+    },
+    "products": {
+      "type": "featured-products",
+      "settings": {
+        "title": "Nos Produits",
+        "collection": "all"
+      }
+    }
+  },
+  "order": ["hero", "products"]
+}

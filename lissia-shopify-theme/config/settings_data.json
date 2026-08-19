@@ -1,0 +1,14 @@
+{
+  "current": "Default",
+  "presets": {
+    "Default": {
+      "color_scheme": "light",
+      "accent_color": "#d4af37",
+      "primary_dark": "#1a1a1a",
+      "font_body_family": "'inter', sans-serif",
+      "font_heading_family": "'inter', sans-serif",
+      "page_width": 1200,
+      "spacing_sections": "medium"
+    }
+  }
+}
